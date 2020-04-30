@@ -8,5 +8,9 @@ function myFunction() {
     }
 }
 
+function toggleHam(x) {
+    x.classList.toggle("change");
+}
+
 
 
