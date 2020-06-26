@@ -1,63 +1,109 @@
 
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title> Stacy's Garden </title>
+  <!-- Link to external CSS --!>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/highlight.min.js"> </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap" rel="stylesheet"> 
+  <style type="text/css">
+  body {
+    font-family: 'Alegreya Sans', sans-serif;
+    padding: 35px 0px;
+    background-color: #fdfdfe;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 
-  <! -- Link to external CSS --!>
-  <link rel="stylesheet" href="css/style.css">
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0px;
+  }
+
+  li {
+    margin: 0px 5px;
+  }
+
+  h3 {
+    padding: 0px 0px;
+    margin: 5px 0px;
+  }
+  </style>
+  <script src="papaparse.min.js"></script>
+  <script src="markdown-it.min.js"></script>
 
 </head>
 
 <body>
-<header>
-  <div class="topnav" id="landingTopNav">
-    <a href="#home" class="active">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="hamMenue" onclick="toggleHam(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </i>
-    </a>
-  </div>
+  <header>
+    <h1>
+        🍃🌿🌱 Stacy's Idea Garden 🌱🌿🍃
+    </h1>
+    <nav>
+        <a href="">TestLink1</a>  |  <a href="">TestLink2</a>
+    </nav>
+   <br>
+  </header>
 
-  <script src="js/myFirstJS.js"></script>
-</header>
 
-<main>
+  <main>
+    <ul id="ThoughtFeed">
+        <li>
+        <h3> Garden!! </h3>
+        <div><p> This is text! </p> </div>
+        </li>
+    </ul>
+  </main>
 
-  <div class="row">
-    <div class="side">
-      <h2> 30% header </h2>
-      <h5> Image placeholder :</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p> Some text absdefg in culpa qui officia deserunt mollit anim..</p>
-      <h3> More Text</h3>
-      <p> texLorem ipsum dolor sit ame.</p>
-      <div class="fakeimg" style="height:60px;">Image</div><br>
-      <div class="fakeimg" style="height:60px;">Image</div><br>
-      <div class="fakeimg" style="height:60px;">Image</div>
-    </div>
+  <script>
+    function main() {
+        const filename = "test.csv";
+        var   container = document.getElementById('ThoughtFeed');
+        var   csvText = 'TS,body\n6/11/2020 22:29:14,"This is some text blah blah blah  \n **bold**\n```python\n # a python comment \n def main():\n\treturn\n```"\n6/12/2020 22:15:09,"This is a second sample"';
 
-    <div class="main">
-      <h2>70%</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
+        const contents = Papa.parse(csvText, {
+            header: true,
+            step : parse_row(container),
+            complete: function(results) {
+                console.log("DONE", results);
+            },
+            error : function (error) {
+                console.log(error);
+            },
+        });
+    }
+    function parse_row(container) {
+        return function (row) {
+            var md = window.markdownit({
+                breaks:true, // TODO: What happens without this? 
+                typographer:true,
+                highlight: function (str, lang) {
+                    if (lang && hljs.getLanguage(lang)) {
+                        try {
+                            return hljs.highlight(lang, str).value;
+                        } catch (___) {}
+                    }
+                    return '';
 
-</main>
+                },
+            });
+            const TS = row.data["TS"];
 
-<footer>
-  <div class='footer'>
-    <h2> placeholder footer </h2>
-  </div>
-</footer>
+            const body = row.data["body"];
+            const thought_html = `<li>
+            <h3>${md.render(TS)} </h3>
+            <div><p>${md.render(body)} </p></div>
+            </li>`;
+            container.insertAdjacentHTML('afterBegin', thought_html);
+        }
+    }
+
+    main();
+
+  </script>
 
 
 </body>
