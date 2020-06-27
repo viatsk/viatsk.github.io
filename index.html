@@ -43,7 +43,7 @@
         🍃🌿🌱 Stacy's Idea Garden 🌱🌿🍃
     </h1>
     <nav>
-        <a href="books.html">Books</a>  |  <a href="">TestLink2</a>
+        <a href="books.html">Books</a>  |  <a href="Resume.pdf">Resume</a>
     </nav>
    <br>
   </header>
@@ -77,17 +77,6 @@
                 console.log(error);
             },
         });
-    }
-
-    function readTextFile(file) {
-//        var rawFile = new XMLLHttpRequest();
-//        rawFile.open("GET", file, false);
-//        rawFile.onreadystatechange = function {} {
-        
-//        }
-//        rawFile.send(null);
-//        var fs = require('fs');
-        return fs.readFileSync(file).toString();
     }
 
     function parse_row(container) {
