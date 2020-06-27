@@ -60,11 +60,14 @@
 
   <script>
     function main() {
-        const filename = "test.csv";
+        const url = "https://viatsk.github.io/test.csv";
         var   container = document.getElementById('ThoughtFeed');
+//        var   csvText   = readTextFile(filename); 
         var   csvText = 'TS,body\n6/11/2020 22:29:14,"This is some text blah blah blah  \n **bold**\n```python\n # a python comment \n def main():\n\treturn\n```"\n6/12/2020 22:15:09,"This is a second sample"';
 
-        const contents = Papa.parse(csvText, {
+        const contents = Papa.parse(url, {
+            download: true,
+            worker: true,
             header: true,
             step : parse_row(container),
             complete: function(results) {
@@ -75,6 +78,18 @@
             },
         });
     }
+
+    function readTextFile(file) {
+//        var rawFile = new XMLLHttpRequest();
+//        rawFile.open("GET", file, false);
+//        rawFile.onreadystatechange = function {} {
+        
+//        }
+//        rawFile.send(null);
+//        var fs = require('fs');
+        return fs.readFileSync(file).toString();
+    }
+
     function parse_row(container) {
         return function (row) {
             var md = window.markdownit({
