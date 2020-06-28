@@ -60,14 +60,14 @@
 
   <script>
     function main() {
-        const url = "/test.csv";
+        const url = "https://stacy.garden/test.csv";
         var   container = document.getElementById('ThoughtFeed');
 //        var   csvText   = readTextFile(filename); 
 //        var   csvText = 'TS,body\n6/11/2020 22:29:14,"This is some text blah blah blah  \n **bold**\n```python\n # a python comment \n def main():\n\treturn\n```"\n6/12/2020 22:15:09,"This is a second sample"';
 
         const contents = Papa.parse(url, {
             delimiter: ",",
-            newline: "\n",
+            newline: ";",
             download: true,
             worker: true,
             header: true,
