@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>/2020/08/01/testpost.html</loc>
+<lastmod>2020-08-01T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>/2020/08/01/testpost2.html</loc>
+<lastmod>2020-08-01T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>/books.html</loc>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/Resume.pdf</loc>
+<lastmod>2020-06-27T18:51:40-04:00</lastmod>
+</url>
+<url>
+<loc>/index2.html</loc>
+<lastmod>2020-06-26T18:09:11-04:00</lastmod>
+</url>
+<url>
+<loc>/old/</loc>
+<lastmod>2020-06-26T18:06:40-04:00</lastmod>
+</url>
+</urlset>

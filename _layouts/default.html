@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title> {{ page.title }} </title>
+  <!-- Link to external CSS --!>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/highlight.min.js"> </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap" rel="stylesheet"> 
+  <style type="text/css">
+  body {
+    font-family: 'Alegreya Sans', sans-serif;
+    padding: 35px 0px;
+    background-color: #fdfdfe;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0px;
+  }
+
+  li {
+    margin: 0px 5px;
+  }
+
+  h2 {
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
+  
+  h3 {
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
+  </style>
+  <script src="papaparse.min.js"></script>
+  <script src="markdown-it.min.js"></script>
+
+  {% feed_meta %}
+  {% seo %}
+</head>
+
+<body>
+  <header>
+    <h1>
+        🍃🌿🌱 Stacy's Idea Garden 🌱🌿🍃🐞
+    </h1>
+    {% include navigation.html %}
+   <br>
+  </header>
+
+
+  <main>
+    {{ content }}
+  </main>
+
+
+</body>
+</html>
