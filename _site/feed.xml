@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-02T19:52:30-04:00</updated><id>/feed.xml</id><entry><title type="html">Test Post (Bananas)</title><link href="/2020/08/01/testpost.html" rel="alternate" type="text/html" title="Test Post (Bananas)" /><published>2020-08-01T00:00:00-04:00</published><updated>2020-08-01T00:00:00-04:00</updated><id>/2020/08/01/testpost</id><content type="html" xml:base="/2020/08/01/testpost.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-02T22:45:49-04:00</updated><id>/feed.xml</id><entry><title type="html">Jekyll go brrrrr</title><link href="/2020/08/02/hardwork.html" rel="alternate" type="text/html" title="Jekyll go brrrrr" /><published>2020-08-02T00:00:00-04:00</published><updated>2020-08-02T00:00:00-04:00</updated><id>/2020/08/02/hardwork</id><content type="html" xml:base="/2020/08/02/hardwork.html">&lt;p&gt;Today I wrote some functioning(?) software, and I feel ok about myself.&lt;/p&gt;
+
+&lt;p&gt;My TODOs for this page are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Make full set of markdown features work (update default stylesheet?) so I can blog about programming. Priority is code markup with relevant syntax highlighting, but block quotes and tables are also useful&lt;/li&gt;
+  &lt;li&gt;Integrate latex equations, so I can blog about maths&lt;/li&gt;
+  &lt;li&gt;Figure out how to add SQL database; make interactive “library” section&lt;/li&gt;
+  &lt;li&gt;Different font for blog post, headings, timestamps, navigation bar (as of writing this, I am only using one font everywhere)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Today I wrote some functioning(?) software, and I feel ok about myself.</summary></entry><entry><title type="html">First Test Post (Bananas)</title><link href="/2020/08/01/testpost.html" rel="alternate" type="text/html" title="First Test Post (Bananas)" /><published>2020-08-01T00:00:00-04:00</published><updated>2020-08-01T00:00:00-04:00</updated><id>/2020/08/01/testpost</id><content type="html" xml:base="/2020/08/01/testpost.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
 
 &lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,
@@ -20,8 +28,7 @@ Lets try a blockquote:&lt;/p&gt;
 &lt;p&gt;Ok.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;h2 id=&quot;this-is-a-header-inside-l1-blockquote&quot;&gt;This is a header inside l1 blockquote&lt;/h2&gt;
-
+  &lt;p&gt;This is a list inside block quotes:&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;This is the first list item.&lt;/li&gt;
     &lt;li&gt;This is the second list item.&lt;/li&gt;
