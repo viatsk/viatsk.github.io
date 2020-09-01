@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title> {{ page.title }} </title>
+  <title> About </title>
   <!-- Link to external CSS --!>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/highlight.min.js"> </script>
@@ -37,8 +37,16 @@
   </style>
   <script src="markdown-it.min.js"></script>
 
-  {% feed_meta %}
-  {% seo %}
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>About</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="About" />
+<meta property="og:locale" content="en_US" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/about.html","headline":"About","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
 </head>
 
 <body>
@@ -46,13 +54,34 @@
     <h1>
         🍃🌿🌱 Stacy's Idea Garden 🌱🌿🍃🐞
     </h1>
-    {% include navigation.html %}
+    <nav>
+  
+    <a href="/" style="color: Blue;">
+     Home
+    </a> |  
+  
+    <a href="/books.html" style="color: Blue;">
+     Reading List
+    </a> |  
+  
+    <a href="/about.html" style="color: DarkGreen;">
+     About
+    </a> |  
+  
+  <a href="Resume.pdf" style="color: Blue;"> Resume </a>
+</nav>
+
    <br>
   </header>
 
 
   <main>
-    {{ content }}
+      <main>
+    <p> Hello! Welcome to my garden, where I plant the seeds of my ideas. Currently this blog is not very populated, but that's something that I am going to work on! </p>
+  </main>
+
+
+
   </main>
 
 

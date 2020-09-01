@@ -7,7 +7,8 @@
   <!-- Link to external CSS --!>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/highlight.min.js"> </script>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"> 
   <style type="text/css">
   body {
     font-family: 'Alegreya Sans', sans-serif;
@@ -15,9 +16,10 @@
     background-color: #fdfdfe;
     max-width: 800px;
     margin: 0 auto;
+    font-size: 125%;
   }
 
-  ul {
+  ul.none {
     list-style-type: none;
     padding: 0px;
     margin: 30px 0px;
@@ -26,21 +28,13 @@
   li {
     margin: 0px 5px;
   }
-
-  h2 {
-    padding: 0px 0px;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    margin-left: 0;
-    margin-right: 0; 
+  ul.bullet {
+    
   }
-  
-  h3 {
-    padding: 0px 0px;
-    margin: 0px 0px;
-  }
+  h1 {
+    font-family: 'Anonymous Pro', monospace;
+  }  
   </style>
-  <script src="papaparse.min.js"></script>
   <script src="markdown-it.min.js"></script>
 
   <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
@@ -62,15 +56,19 @@
     </h1>
     <nav>
   
-    <a href="/" >
-      Home
-    </a> |
+    <a href="/" style="color: Blue;">
+     Home
+    </a> |  
   
     <a href="/books.html" style="color: DarkGreen;">
-      Reading List
-    </a> |
+     Reading List
+    </a> |  
   
-    <a href="Resume.pdf">Resume</a>
+    <a href="/about.html" style="color: Blue;">
+     About
+    </a> |  
+  
+  <a href="Resume.pdf" style="color: Blue;"> Resume </a>
 </nav>
 
    <br>
@@ -79,22 +77,36 @@
 
   <main>
       <main>
-    <p> This list is not out of date, but it is pretty short because I got tired of writing HTML by hand. When I figure out how to make Jekyll render something from a database for me nicely, it will be longer 😳 </p>
-    <ul id="ThoughtFeed2">
+    <p> I have many interests and hobbies. Generally, I am actively reading 2 or 3 books at a time. This is possible because at least one of the books is typically a textbook, another is some sort of less serious non-fiction, and the third is a fiction book. I turn my attention more infrequently to other texts which I consider to be medium and long-term projects. </p>
+    <ul class="none" id="CurrBooks">
         <li>
-        <h3> Here are the books I am currently reading: </h3>
-        <div><p> 
-        Democracy May Not Exist, But We'll Miss It When It's Gone by <em>Astra Taylor</em> </p> </div> 
-        <div><p>Learn You a Haskell for Great Good by <em>Miran Lipovaca</em> </p> </div>
-        <div><a href="https://softwarefoundations.cis.upenn.edu/lf-current/index.html"> Software Foundations: Volume 1</a> </div>
-        <br> 
-
-        <h3> Here are books I intend to read in the future, in order of priority: </h3>
-        <div><p> The Plague by <em>Albert Camus</em> </p></div>
-        <div><p> Expert Political Judgement: How Good Is It? How Can We Know? by <em> Phulip E. Tetlock </em></p></div>
-        <div><p>The Language Animal by <em>Charles Taylor</em></p></div>
-        
+        <h4> Here are the books I am currently reading: </h4>
+        <div><p> To Walk the Night, by William Sloane </p> </div>
+        <div><a href="https://softwarefoundations.cis.upenn.edu/lf-current/index.html"> Software Foundations: Volume 1</a> as part of a reading group with the Computer Science Club at UWaterloo </div>
+        <div> <p> <a href="http://www.linuxfromscratch.org/"> Linux From Scratch</a>, in preparation for a job </p> </div>
+        <div> <p> The Linux Programming Interface, a long-term project so that I can have more complete OS knowledge </p> </div>
         </li>
+    </ul>
+
+    <ul class="none" id="FinishedBooks">
+        <li>
+        <h4> Here are some books that I've recently finished: </h4>
+        <div><p>
+        Democracy May Not Exist, But We'll Miss It When It's Gone, by Astra Taylor </p> </div>
+        <div><p> The Event, by Slavoj Zizek </p> </div>
+        </li>
+    </ul>
+    <hr>
+    <div> <p> Every 6 to 18 months, I will discover a topic that's of intense interest to me and begin to fixate on it. Most recetly, this topic has been interactive theorem provers (like Coq), although I am also interested in learning about the theory behind programming languages in general. I have put together the following diagram of texts which I intend to read over the course of my self-study: </p> </div> 
+    <img src="/assets/PLProgression.png" alt="PL Learning Progression">.
+    <div> <p> This diagram is quite small but also quite ambitious. My confidence in completing it stems from the unexpected continuous productivity that I've been experiancing while in quarentine. I am always interested in receiving recommendations for additional texts, courses (if freely avalible), and other material to learn from. At the end of the day, I am looking to teach myself the equivalent of the UW courses CS 245E (auditing F2020), CS 365, and some of CS 462, CS 442, CS 444. Since I am graduating soon and in an entirely different faculty, I will likely not get the opportunity to take these courses myself &#128557. </p></div>
+    <p> Previous topics of interest to me have been: </p>
+    <ul class = "bullet">
+        <li> Digital Hardware Design and HDLs </li>
+        <li> Systems programming </li>
+        <li> Graph Theory </li>
+        <li> Material Science, specifically as it relates to transistors</li>
+        <li> Biochemistry and Neuroscience (back in high school) </li>
     </ul>
   </main>
 
