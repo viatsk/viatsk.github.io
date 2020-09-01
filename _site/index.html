@@ -81,78 +81,18 @@
       
       <li>
         
-<h2> Jekyll go brrrrr </h2>
-<h3> 02 Aug 2020</h3>
-<div><p> <p>Today I wrote some functioning(?) software, and I feel ok about myself.</p>
+<h2> Second Post (code markdown) </h2>
+<h3> 01 Sep 2020</h3>
+<div><p> <p>A couple of months ago (around April of this year) COBOL was in the news again. Of course, instead of studying for my exams, I decided to teach myself the language.</p>
 
-<p>My TODOs for this page are:</p>
-<ol>
-  <li>Make full set of markdown features work (update default stylesheet?) so I can blog about programming. Priority is code markup with relevant syntax highlighting, but block quotes and tables are also useful</li>
-  <li>Integrate latex equations, so I can blog about maths</li>
-  <li>Figure out how to add SQL database; make interactive “library” section</li>
-  <li>Different font for blog post, headings, timestamps, navigation bar (as of writing this, I am only using one font everywhere)</li>
-</ol>
+<p>Consider this simple “Hello World” program:</p>
 
- </p> </div>
-<hr>
+<figure class="highlight"><pre><code class="language-cobol" data-lang="cobol">IDENTIFICATION DIVISION.
+PROGRAM-ID. HELLO.
 
-
-      </li>
-      
-      <li>
-        
-<h2> Second Test Post </h2>
-<h3> 01 Aug 2020</h3>
-<div><p> <p>Here we’re going to try messing around with some markdown-specific features 
-Lets try a blockquote:</p>
-<blockquote>
-  <p>This is the first level of quoting.</p>
-
-  <blockquote>
-    <p>This is nested blockquote.</p>
-  </blockquote>
-
-  <p>Back to the first level.</p>
-</blockquote>
-
-<p>Ok.</p>
-
-<blockquote>
-  <p>This is a list inside block quotes:</p>
-  <ol>
-    <li>This is the first list item.</li>
-    <li>This is the second list item.</li>
-  </ol>
-
-  <p>Here’s some example code:</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return shell_exec("echo $input | $markdown_script");
-</code></pre></div>  </div>
-</blockquote>
-
-<p><em>single asterisks</em></p>
-
-<p><em>single underscores</em></p>
-
-<p><strong>double asterisks</strong></p>
-
-<p><strong>double underscores</strong></p>
-
-<p>HERE IS A TABLE?? 
-| Syntax      | Description |
-| ———– | ———– |
-| Header      | Title       |
-| Paragraph   | Text        |</p>
-
-<p>Here is a json to test what syntax highlighting does</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-<p>Ok, no tables and no syntax highlighing. Okay for now.</p>
+PROCEDURE DIVISION.
+    DISPLAY 'HELLO WORLD'
+    STOP RUN.</code></pre></figure>
 
  </p> </div>
 <hr>
